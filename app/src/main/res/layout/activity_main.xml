@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/billAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Bill Amount"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/billAmountEt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/dollarSign"
+        android:ems="8"
+        android:hint="$0.00"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/dollarSign"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/billAmount"
+        android:text="  "
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30dp" />
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Percent"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30dp"
+        android:layout_below="@id/billAmount"/>
+    <TextView
+        android:id="@+id/percentSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="  "
+        android:layout_toRightOf="@id/percent"
+        android:layout_below="@id/billAmount"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/percentEv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/billAmountEt"
+        android:layout_toRightOf="@id/percentSymbol"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:text="15"
+        android:textSize="22dp"
+         />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/billAmountEt"
+        android:layout_toRightOf="@id/percentEv"
+        android:text="+"
+        android:textSize="25dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/billAmountEt"
+        android:layout_toEndOf="@+id/plus"
+        android:text="-"
+        android:textSize="25dp"
+        android:id="@+id/minus"/>
+    <Button
+        android:id="@+id/enterBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/billAmountEt"
+        android:layout_toRightOf="@id/minus"
+        android:textSize="20dp"
+        android:text="Enter"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/percent"
+        android:paddingTop="30dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Tip"
+        android:id="@+id/tip"/>
+
+    <TextView
+        android:id="@+id/percentSymbol2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_below="@id/percentSymbol"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/tip"
+        android:text="  "
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/percentEv2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/percentSymbol"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/percentSymbol"
+        android:ems="8"
+        android:hint="$0.00"
+        android:inputType="numberDecimal"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/dollarSign2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_below="@id/percentSymbol2"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/tip"
+        android:text="  "
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/totalEt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/percentSymbol2"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/percentSymbol"
+        android:ems="8"
+        android:hint="$0.00"
+        android:inputType="numberDecimal"
+        android:textSize="22dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip"
+        android:paddingTop="30dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Total"
+        android:layout_marginTop="20dp"
+        android:id="@+id/total"/>
+
+</RelativeLayout>
